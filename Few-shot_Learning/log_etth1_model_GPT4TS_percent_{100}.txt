@@ -1,0 +1,126 @@
+self.enc_in = 7
+self.data_x = (8640, 7)
+train 57463
+self.enc_in = 7
+self.data_x = (3216, 7)
+val 19495
+self.enc_in = 7
+self.data_x = (3216, 7)
+test 19495
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (1): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (2): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (3): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (4): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (5): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+0it [00:00, ?it/s]1it [00:00,  6.47it/s]4it [00:00, 14.50it/s]7it [00:00, 17.74it/s]10it [00:00, 19.92it/s]13it [00:00, 21.23it/s]16it [00:00, 22.05it/s]19it [00:00, 22.57it/s]22it [00:01, 22.93it/s]25it [00:01, 23.20it/s]28it [00:01, 23.35it/s]31it [00:01, 23.46it/s]34it [00:01, 23.55it/s]37it [00:01, 23.61it/s]40it [00:01, 23.66it/s]43it [00:01, 23.69it/s]46it [00:02, 23.66it/s]49it [00:02, 23.69it/s]52it [00:02, 23.72it/s]55it [00:02, 23.85it/s]58it [00:02, 23.81it/s]61it [00:02, 23.79it/s]64it [00:02, 23.77it/s]67it [00:02, 23.75it/s]70it [00:03, 23.73it/s]73it [00:03, 23.70it/s]76it [00:03, 23.71it/s]79it [00:03, 23.72it/s]82it [00:03, 23.71it/s]85it [00:03, 23.71it/s]88it [00:03, 23.71it/s]91it [00:03, 23.80it/s]94it [00:04, 23.77it/s]97it [00:04, 23.77it/s]100it [00:04, 23.77it/s]103it [00:04, 23.76it/s]106it [00:04, 23.74it/s]109it [00:04, 23.74it/s]112it [00:04, 23.76it/s]115it [00:04, 23.74it/s]118it [00:05, 23.75it/s]121it [00:05, 23.75it/s]124it [00:05, 23.74it/s]127it [00:05, 23.73it/s]130it [00:05, 23.73it/s]133it [00:05, 23.74it/s]136it [00:05, 23.74it/s]139it [00:05, 23.76it/s]142it [00:06, 23.73it/s]145it [00:06, 23.72it/s]148it [00:06, 23.73it/s]151it [00:06, 23.75it/s]154it [00:06, 23.75it/s]157it [00:06, 23.74it/s]160it [00:06, 23.74it/s]163it [00:07, 23.75it/s]166it [00:07, 23.73it/s]169it [00:07, 23.75it/s]172it [00:07, 23.76it/s]175it [00:07, 23.76it/s]178it [00:07, 23.76it/s]181it [00:07, 23.76it/s]184it [00:07, 23.74it/s]187it [00:08, 23.75it/s]190it [00:08, 23.75it/s]193it [00:08, 23.74it/s]196it [00:08, 23.75it/s]199it [00:08, 23.75it/s]202it [00:08, 23.76it/s]205it [00:08, 23.70it/s]208it [00:08, 23.68it/s]211it [00:09, 23.69it/s]214it [00:09, 23.71it/s]217it [00:09, 23.71it/s]220it [00:09, 23.72it/s]223it [00:09, 23.72it/s]226it [00:09, 23.72it/s]229it [00:09, 23.72it/s]232it [00:09, 23.71it/s]235it [00:10, 23.72it/s]238it [00:10, 23.71it/s]241it [00:10, 23.71it/s]244it [00:10, 23.73it/s]247it [00:10, 23.70it/s]250it [00:10, 23.70it/s]253it [00:10, 23.71it/s]256it [00:10, 23.70it/s]259it [00:11, 23.69it/s]262it [00:11, 23.71it/s]265it [00:11, 23.66it/s]268it [00:11, 23.71it/s]271it [00:11, 23.70it/s]274it [00:11, 23.70it/s]277it [00:11, 23.68it/s]280it [00:11, 23.71it/s]283it [00:12, 23.72it/s]286it [00:12, 23.71it/s]289it [00:12, 23.70it/s]292it [00:12, 23.72it/s]295it [00:12, 23.70it/s]298it [00:12, 23.71it/s]301it [00:12, 23.71it/s]304it [00:12, 23.71it/s]307it [00:13, 23.69it/s]310it [00:13, 23.70it/s]313it [00:13, 23.70it/s]316it [00:13, 23.71it/s]319it [00:13, 23.71it/s]322it [00:13, 23.72it/s]325it [00:13, 23.71it/s]328it [00:13, 23.73it/s]331it [00:14, 23.72it/s]334it [00:14, 23.72it/s]337it [00:14, 23.71it/s]340it [00:14, 23.74it/s]343it [00:14, 23.72it/s]346it [00:14, 23.72it/s]349it [00:14, 23.71it/s]352it [00:14, 23.72it/s]355it [00:15, 23.70it/s]358it [00:15, 23.73it/s]361it [00:15, 23.73it/s]364it [00:15, 23.73it/s]367it [00:15, 23.73it/s]370it [00:15, 23.73it/s]373it [00:15, 23.71it/s]376it [00:15, 23.71it/s]379it [00:16, 23.70it/s]382it [00:16, 23.70it/s]385it [00:16, 23.70it/s]388it [00:16, 23.71it/s]391it [00:16, 23.71it/s]394it [00:16, 23.72it/s]397it [00:16, 23.70it/s]400it [00:17, 23.71it/s]403it [00:17, 23.71it/s]406it [00:17, 23.72it/s]409it [00:17, 23.71it/s]412it [00:17, 23.71it/s]415it [00:17, 23.72it/s]418it [00:17, 23.72it/s]421it [00:17, 23.74it/s]424it [00:18, 23.72it/s]427it [00:18, 23.73it/s]430it [00:18, 23.73it/s]433it [00:18, 23.74it/s]436it [00:18, 23.74it/s]439it [00:18, 23.74it/s]442it [00:18, 23.74it/s]445it [00:18, 23.75it/s]448it [00:19, 23.75it/s]451it [00:19, 23.75it/s]454it [00:19, 23.75it/s]457it [00:19, 23.75it/s]460it [00:19, 23.75it/s]463it [00:19, 23.74it/s]466it [00:19, 23.74it/s]469it [00:19, 23.66it/s]472it [00:20, 23.68it/s]475it [00:20, 23.69it/s]478it [00:20, 23.70it/s]481it [00:20, 23.70it/s]484it [00:20, 23.68it/s]487it [00:20, 23.67it/s]490it [00:20, 23.69it/s]493it [00:20, 23.68it/s]496it [00:21, 23.67it/s]499it [00:21, 23.64it/s]502it [00:21, 23.67it/s]505it [00:21, 23.66it/s]508it [00:21, 23.68it/s]511it [00:21, 23.68it/s]514it [00:21, 23.66it/s]517it [00:21, 23.67it/s]520it [00:22, 23.66it/s]523it [00:22, 23.66it/s]526it [00:22, 23.66it/s]529it [00:22, 23.84it/s]532it [00:22, 23.76it/s]535it [00:22, 23.75it/s]538it [00:22, 23.69it/s]541it [00:22, 23.68it/s]544it [00:23, 23.68it/s]547it [00:23, 23.66it/s]550it [00:23, 23.63it/s]553it [00:23, 23.65it/s]556it [00:23, 23.67it/s]559it [00:23, 23.69it/s]562it [00:23, 23.69it/s]565it [00:23, 23.66it/s]568it [00:24, 23.63it/s]571it [00:24, 23.64it/s]574it [00:24, 23.65it/s]577it [00:24, 23.66it/s]580it [00:24, 23.68it/s]583it [00:24, 23.63it/s]586it [00:24, 23.66it/s]589it [00:24, 23.67it/s]592it [00:25, 23.68it/s]595it [00:25, 23.67it/s]598it [00:25, 23.68it/s]601it [00:25, 23.67it/s]604it [00:25, 23.67it/s]607it [00:25, 23.67it/s]610it [00:25, 23.65it/s]613it [00:25, 23.70it/s]616it [00:26, 23.64it/s]619it [00:26, 23.60it/s]622it [00:26, 23.58it/s]625it [00:26, 23.61it/s]628it [00:26, 23.61it/s]631it [00:26, 23.61it/s]634it [00:26, 23.60it/s]637it [00:27, 23.61it/s]640it [00:27, 23.60it/s]643it [00:27, 23.60it/s]646it [00:27, 23.61it/s]649it [00:27, 23.60it/s]652it [00:27, 23.61it/s]655it [00:27, 23.57it/s]658it [00:27, 23.59it/s]661it [00:28, 23.58it/s]664it [00:28, 23.56it/s]667it [00:28, 23.55it/s]670it [00:28, 23.58it/s]673it [00:28, 23.59it/s]676it [00:28, 23.60it/s]679it [00:28, 23.58it/s]682it [00:28, 23.60it/s]685it [00:29, 23.61it/s]688it [00:29, 23.58it/s]691it [00:29, 23.54it/s]694it [00:29, 23.53it/s]697it [00:29, 23.51it/s]700it [00:29, 23.47it/s]703it [00:29, 23.45it/s]706it [00:29, 23.45it/s]709it [00:30, 23.58it/s]712it [00:30, 23.59it/s]715it [00:30, 23.60it/s]718it [00:30, 23.60it/s]721it [00:30, 23.59it/s]724it [00:30, 23.61it/s]727it [00:30, 23.61it/s]730it [00:30, 23.59it/s]733it [00:31, 23.61it/s]736it [00:31, 23.63it/s]739it [00:31, 23.64it/s]742it [00:31, 23.67it/s]745it [00:31, 23.67it/s]748it [00:31, 23.69it/s]751it [00:31, 23.69it/s]754it [00:31, 23.70it/s]757it [00:32, 23.70it/s]760it [00:32, 23.69it/s]763it [00:32, 23.71it/s]766it [00:32, 23.71it/s]769it [00:32, 23.70it/s]772it [00:32, 23.73it/s]775it [00:32, 23.71it/s]778it [00:32, 23.71it/s]781it [00:33, 23.71it/s]784it [00:33, 23.72it/s]787it [00:33, 23.73it/s]790it [00:33, 23.74it/s]793it [00:33, 23.73it/s]796it [00:33, 23.73it/s]799it [00:33, 23.73it/s]802it [00:33, 23.82it/s]805it [00:34, 23.77it/s]808it [00:34, 23.71it/s]811it [00:34, 23.67it/s]814it [00:34, 23.68it/s]817it [00:34, 23.65it/s]820it [00:34, 23.66it/s]823it [00:34, 23.67it/s]826it [00:35, 23.69it/s]829it [00:35, 23.69it/s]832it [00:35, 23.70it/s]835it [00:35, 23.71it/s]838it [00:35, 23.70it/s]841it [00:35, 23.69it/s]844it [00:35, 23.69it/s]847it [00:35, 23.68it/s]850it [00:36, 23.71it/s]853it [00:36, 23.70it/s]856it [00:36, 23.71it/s]859it [00:36, 23.73it/s]862it [00:36, 23.74it/s]865it [00:36, 23.74it/s]868it [00:36, 23.74it/s]871it [00:36, 23.72it/s]874it [00:37, 23.72it/s]877it [00:37, 23.71it/s]880it [00:37, 23.31it/s]883it [00:37, 23.45it/s]886it [00:37, 23.55it/s]889it [00:37, 23.59it/s]892it [00:37, 23.64it/s]895it [00:37, 23.68it/s]897it [00:38, 23.56it/s]
+Epoch: 1 cost time: 39.48316287994385
+0it [00:00, ?it/s]3it [00:00, 29.52it/s]6it [00:00, 28.43it/s]10it [00:00, 30.06it/s]14it [00:00, 30.49it/s]18it [00:00, 30.86it/s]22it [00:00, 31.08it/s]26it [00:00, 30.96it/s]30it [00:00, 30.86it/s]34it [00:01, 30.74it/s]38it [00:01, 30.66it/s]42it [00:01, 30.61it/s]46it [00:01, 30.59it/s]50it [00:01, 30.59it/s]54it [00:01, 30.61it/s]58it [00:01, 30.62it/s]62it [00:02, 30.60it/s]66it [00:02, 30.50it/s]70it [00:02, 30.51it/s]74it [00:02, 30.12it/s]78it [00:02, 29.79it/s]82it [00:02, 29.97it/s]85it [00:02, 29.91it/s]88it [00:02, 29.91it/s]92it [00:03, 29.98it/s]95it [00:03, 29.80it/s]98it [00:03, 28.45it/s]102it [00:03, 29.01it/s]106it [00:03, 28.90it/s]109it [00:03, 28.47it/s]113it [00:03, 29.01it/s]117it [00:03, 29.38it/s]121it [00:04, 29.61it/s]124it [00:04, 29.69it/s]127it [00:04, 29.66it/s]131it [00:04, 29.77it/s]135it [00:04, 29.85it/s]139it [00:04, 29.93it/s]142it [00:04, 29.85it/s]146it [00:04, 29.99it/s]150it [00:04, 30.02it/s]153it [00:05, 29.97it/s]157it [00:05, 29.99it/s]161it [00:05, 29.97it/s]165it [00:05, 30.02it/s]169it [00:05, 29.62it/s]173it [00:05, 29.79it/s]177it [00:05, 29.91it/s]180it [00:06, 29.50it/s]183it [00:06, 29.61it/s]187it [00:06, 29.73it/s]191it [00:06, 29.84it/s]195it [00:06, 29.91it/s]199it [00:06, 30.03it/s]203it [00:06, 29.98it/s]207it [00:06, 30.00it/s]211it [00:07, 30.04it/s]215it [00:07, 29.94it/s]219it [00:07, 30.00it/s]223it [00:07, 30.04it/s]227it [00:07, 30.08it/s]231it [00:07, 30.11it/s]235it [00:07, 30.15it/s]239it [00:07, 30.17it/s]243it [00:08, 30.15it/s]247it [00:08, 30.13it/s]251it [00:08, 29.63it/s]255it [00:08, 29.92it/s]259it [00:08, 30.01it/s]263it [00:08, 30.07it/s]267it [00:08, 30.07it/s]271it [00:09, 30.03it/s]275it [00:09, 29.99it/s]279it [00:09, 29.98it/s]283it [00:09, 29.99it/s]286it [00:09, 29.97it/s]289it [00:09, 29.96it/s]293it [00:09, 30.02it/s]297it [00:09, 30.05it/s]301it [00:10, 30.08it/s]304it [00:10, 29.73it/s]
+Epoch: 1, Steps: 897 | Train Loss: 0.3664854 Vali Loss: 0.7122756
+lr = 0.0000993845
+Validation loss decreased (inf --> 0.712276).  Saving model ...
+------------------------------------
+0it [00:00, ?it/s]5it [00:00, 45.17it/s]13it [00:00, 61.72it/s]21it [00:00, 69.22it/s]30it [00:00, 74.11it/s]39it [00:00, 77.17it/s]48it [00:00, 79.23it/s]57it [00:00, 80.30it/s]66it [00:00, 81.10it/s]75it [00:00, 81.62it/s]84it [00:01, 82.17it/s]93it [00:01, 82.28it/s]102it [00:01, 82.65it/s]111it [00:01, 82.68it/s]120it [00:01, 82.87it/s]129it [00:01, 82.76it/s]138it [00:01, 83.04it/s]147it [00:01, 83.06it/s]156it [00:01, 83.01it/s]165it [00:02, 83.00it/s]174it [00:02, 83.11it/s]183it [00:02, 82.89it/s]192it [00:02, 83.05it/s]201it [00:02, 83.06it/s]210it [00:02, 83.11it/s]219it [00:02, 82.76it/s]228it [00:02, 82.85it/s]237it [00:02, 82.82it/s]246it [00:03, 82.74it/s]255it [00:03, 82.74it/s]264it [00:03, 82.95it/s]273it [00:03, 82.76it/s]282it [00:03, 82.93it/s]291it [00:03, 83.06it/s]300it [00:03, 83.43it/s]304it [00:03, 80.43it/s]
+test shape: (304, 64, 96, 1) (304, 64, 96, 1)
+test shape: (19456, 96, 1) (19456, 96, 1)
+mae:0.4045, mse:0.3884, rmse:0.6232, smape:74.5038
+mse_mean = 0.3884, mse_std = 0.0000
+mae_mean = 0.4045, mae_std = 0.0000

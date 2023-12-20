@@ -1,0 +1,65 @@
+train 74382
+val 108675
+test 219324
+> /dccstor/dnn_forecasting/FM/sota_evals/NeurIPS2023-One-Fits-All/Few-shot_Learning/main.py(182)<module>()
+-> if args.model == "PatchTST":
+(Pdb) gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Model params that has gradient
+gpt2.wpe.weight: requires_grad=True : #params=786432
+gpt2.h.0.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.0.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.0.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.0.ln_2.bias: requires_grad=True : #params=768
+gpt2.h.1.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.1.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.1.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.1.ln_2.bias: requires_grad=True : #params=768
+gpt2.h.2.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.2.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.2.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.2.ln_2.bias: requires_grad=True : #params=768
+gpt2.h.3.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.3.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.3.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.3.ln_2.bias: requires_grad=True : #params=768
+gpt2.h.4.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.4.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.4.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.4.ln_2.bias: requires_grad=True : #params=768
+gpt2.h.5.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.5.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.5.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.5.ln_2.bias: requires_grad=True : #params=768
+gpt2.ln_f.weight: requires_grad=True : #params=768
+gpt2.ln_f.bias: requires_grad=True : #params=768
+in_layer.weight: requires_grad=True : #params=49152
+in_layer.bias: requires_grad=True : #params=768
+out_layer.weight: requires_grad=True : #params=663552
+out_layer.bias: requires_grad=True : #params=96
+Total #params manual = 1519968
+> /dccstor/dnn_forecasting/FM/sota_evals/NeurIPS2023-One-Fits-All/Few-shot_Learning/main.py(205)<module>()
+-> params = model.parameters()
+(Pdb) 

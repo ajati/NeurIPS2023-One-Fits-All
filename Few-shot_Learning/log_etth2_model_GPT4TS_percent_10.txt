@@ -1,0 +1,126 @@
+self.enc_in = 7
+self.data_x = (1166, 7)
+train 5145
+self.enc_in = 7
+self.data_x = (3216, 7)
+val 19495
+self.enc_in = 7
+self.data_x = (3216, 7)
+test 19495
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (1): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (2): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (3): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (4): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+    (5): GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+0it [00:00, ?it/s]1it [00:00,  6.87it/s]4it [00:00, 14.52it/s]7it [00:00, 17.07it/s]10it [00:00, 18.37it/s]13it [00:00, 20.11it/s]16it [00:00, 21.29it/s]19it [00:00, 22.05it/s]22it [00:01, 22.59it/s]25it [00:01, 22.91it/s]28it [00:01, 23.18it/s]31it [00:01, 23.38it/s]34it [00:01, 23.51it/s]37it [00:01, 23.59it/s]40it [00:01, 23.65it/s]43it [00:01, 23.67it/s]46it [00:02, 23.72it/s]49it [00:02, 23.74it/s]52it [00:02, 23.76it/s]55it [00:02, 23.77it/s]58it [00:02, 23.76it/s]61it [00:02, 23.71it/s]64it [00:02, 23.68it/s]67it [00:02, 23.67it/s]70it [00:03, 23.68it/s]73it [00:03, 23.67it/s]76it [00:03, 23.70it/s]79it [00:03, 23.70it/s]80it [00:03, 22.22it/s]
+Epoch: 1 cost time: 4.926390171051025
+0it [00:00, ?it/s]2it [00:00, 13.65it/s]6it [00:00, 23.14it/s]9it [00:00, 25.36it/s]13it [00:00, 27.62it/s]17it [00:00, 28.87it/s]21it [00:00, 29.40it/s]25it [00:00, 29.78it/s]29it [00:01, 29.95it/s]33it [00:01, 30.01it/s]37it [00:01, 29.95it/s]41it [00:01, 30.01it/s]45it [00:01, 30.08it/s]49it [00:01, 30.14it/s]53it [00:01, 30.17it/s]57it [00:01, 30.17it/s]61it [00:02, 30.10it/s]65it [00:02, 30.07it/s]69it [00:02, 30.02it/s]73it [00:02, 30.12it/s]77it [00:02, 30.16it/s]81it [00:02, 30.20it/s]85it [00:02, 30.21it/s]89it [00:03, 30.21it/s]93it [00:03, 30.23it/s]97it [00:03, 30.24it/s]101it [00:03, 30.21it/s]105it [00:03, 30.21it/s]109it [00:03, 30.20it/s]113it [00:03, 30.21it/s]117it [00:03, 29.65it/s]120it [00:04, 28.51it/s]123it [00:04, 28.85it/s]127it [00:04, 29.24it/s]131it [00:04, 29.50it/s]135it [00:04, 29.72it/s]139it [00:04, 29.81it/s]143it [00:04, 29.92it/s]147it [00:04, 29.98it/s]151it [00:05, 29.98it/s]154it [00:05, 29.96it/s]157it [00:05, 29.89it/s]160it [00:05, 29.83it/s]164it [00:05, 29.96it/s]168it [00:05, 30.01it/s]172it [00:05, 30.07it/s]176it [00:05, 30.04it/s]180it [00:06, 30.08it/s]184it [00:06, 30.27it/s]188it [00:06, 30.21it/s]192it [00:06, 30.19it/s]196it [00:06, 30.20it/s]200it [00:06, 30.16it/s]204it [00:06, 29.90it/s]208it [00:07, 30.02it/s]212it [00:07, 29.96it/s]215it [00:07, 29.95it/s]218it [00:07, 29.96it/s]222it [00:07, 30.05it/s]226it [00:07, 30.13it/s]230it [00:07, 30.19it/s]234it [00:07, 30.19it/s]238it [00:08, 30.16it/s]242it [00:08, 30.15it/s]246it [00:08, 30.15it/s]250it [00:08, 30.13it/s]254it [00:08, 30.16it/s]258it [00:08, 30.18it/s]262it [00:08, 30.19it/s]266it [00:08, 30.19it/s]270it [00:09, 30.23it/s]274it [00:09, 30.20it/s]278it [00:09, 30.16it/s]282it [00:09, 30.19it/s]286it [00:09, 30.10it/s]290it [00:09, 30.18it/s]294it [00:09, 30.24it/s]298it [00:09, 30.28it/s]302it [00:10, 30.30it/s]304it [00:10, 29.60it/s]
+Epoch: 1, Steps: 80 | Train Loss: 0.2846158 Vali Loss: 0.2847363
+lr = 0.0009938442
+Validation loss decreased (inf --> 0.284736).  Saving model ...
+------------------------------------
+0it [00:00, ?it/s]5it [00:00, 45.41it/s]10it [00:00, 25.17it/s]18it [00:00, 40.47it/s]27it [00:00, 53.42it/s]36it [00:00, 62.63it/s]45it [00:00, 69.02it/s]54it [00:00, 73.26it/s]63it [00:01, 76.19it/s]72it [00:01, 78.43it/s]81it [00:01, 79.86it/s]90it [00:01, 81.02it/s]99it [00:01, 81.51it/s]108it [00:01, 82.07it/s]117it [00:01, 82.40it/s]126it [00:01, 82.54it/s]135it [00:01, 82.76it/s]144it [00:01, 82.94it/s]153it [00:02, 82.80it/s]162it [00:02, 83.05it/s]171it [00:02, 83.22it/s]180it [00:02, 83.36it/s]189it [00:02, 83.03it/s]198it [00:02, 83.24it/s]207it [00:02, 83.29it/s]216it [00:02, 83.22it/s]225it [00:02, 83.19it/s]234it [00:03, 83.27it/s]243it [00:03, 83.05it/s]252it [00:03, 83.17it/s]261it [00:03, 83.17it/s]270it [00:03, 83.26it/s]279it [00:03, 83.06it/s]288it [00:03, 83.20it/s]297it [00:03, 83.26it/s]304it [00:03, 76.25it/s]
+test shape: (304, 64, 96, 1) (304, 64, 96, 1)
+test shape: (19456, 96, 1) (19456, 96, 1)
+mae:0.3867, mse:0.3489, rmse:0.5907, smape:56.1224
+mse_mean = 0.3489, mse_std = 0.0000
+mae_mean = 0.3867, mae_std = 0.0000

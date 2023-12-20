@@ -3,22 +3,22 @@ export CUDA_VISIBLE_DEVICES=0
 seq_len=512
 model=GPT4TS
 
-for percent in 5 10
+for percent in 100
 do
-for pred_len in 96 192 336 729
+for pred_len in 96
 do
 
 python main.py \
-    --root_path ./datasets/ETT-small/ \
+    --root_path /dccstor/dnn_forecasting/FM/data/ETDataset/ETT-small/ \
     --data_path ETTm2.csv \
     --model_id ETTm2_$model'_'$gpt_layer'_'$seq_len'_'$pred_len'_'$percent \
     --data ett_m \
     --seq_len $seq_len \
     --label_len 48 \
     --pred_len $pred_len \
-    --batch_size 256 \
+    --batch_size 64 \
     --learning_rate 0.002 \
-    --train_epochs 10 \
+    --train_epochs 1 \
     --decay_fac 0.75 \
     --d_model 768 \
     --n_heads 4 \
@@ -34,6 +34,6 @@ python main.py \
     --itr 1 \
     --model $model \
     --cos 1 \
-    --is_gpt 1
+    --is_gpt 1 2>&1 | tee log_ettm2_model_${model}_percent_${percent}.txt
 done
 done
