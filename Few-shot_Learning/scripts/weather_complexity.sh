@@ -33,5 +33,5 @@ python main.py \
     --gpt_layer 6 \
     --itr 1 \
     --model $model \
-    --is_gpt 1 2>&1 | tee complexity_logs_tmp/complexity_weather_model_${model}_percent_${percent}_seq_${seq_len}_pred_${pred_len}.txt
+    --is_gpt 1 2>&1 | tee complexity_logs/complexity_weather_model_${model}_percent_${percent}_seq_${seq_len}_pred_${pred_len}.txt
     

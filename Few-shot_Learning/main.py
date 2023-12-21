@@ -178,7 +178,6 @@ for ii in range(args.itr):
     time_now = time.time()
     train_steps = len(train_loader)
 
-    breakpoint()
     if args.model == "PatchTST":
         model = PatchTST(args, device)
         model.to(device)
@@ -199,8 +198,6 @@ for ii in range(args.itr):
             )
     print("Total #params manual =", total_params_manual)
     # mse, mae = test(model, test_data, test_loader, args, device, ii)
-
-    breakpoint()
 
     params = model.parameters()
     model_optim = torch.optim.Adam(params, lr=args.learning_rate)
