@@ -1,0 +1,127 @@
+self.enc_in = 2
+self.data_x = (2704, 2)
+train 5170
+self.enc_in = 2
+self.data_x = (1448, 2)
+val 2658
+self.enc_in = 2
+self.data_x = (1449, 2)
+test 2660
+gpt2 = GPT2Model(
+  (wte): Embedding(50257, 768)
+  (wpe): Embedding(1024, 768)
+  (drop): Dropout(p=0.1, inplace=False)
+  (h): ModuleList(
+    (0-5): 6 x GPT2Block(
+      (ln_1): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (attn): GPT2Attention(
+        (c_attn): Conv1D()
+        (c_proj): Conv1D()
+        (attn_dropout): Dropout(p=0.1, inplace=False)
+        (resid_dropout): Dropout(p=0.1, inplace=False)
+      )
+      (ln_2): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+      (mlp): GPT2MLP(
+        (c_fc): Conv1D()
+        (c_proj): Conv1D()
+        (act): NewGELUActivation()
+        (dropout): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (ln_f): LayerNorm((768,), eps=1e-05, elementwise_affine=True)
+)
+Model params that has gradient
+gpt2.wpe.weight: requires_grad=True : #params=786432
+gpt2.h.0.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.0.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.0.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.0.ln_2.bias: requires_grad=True : #params=768
+gpt2.h.1.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.1.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.1.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.1.ln_2.bias: requires_grad=True : #params=768
+gpt2.h.2.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.2.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.2.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.2.ln_2.bias: requires_grad=True : #params=768
+gpt2.h.3.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.3.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.3.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.3.ln_2.bias: requires_grad=True : #params=768
+gpt2.h.4.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.4.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.4.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.4.ln_2.bias: requires_grad=True : #params=768
+gpt2.h.5.ln_1.weight: requires_grad=True : #params=768
+gpt2.h.5.ln_1.bias: requires_grad=True : #params=768
+gpt2.h.5.ln_2.weight: requires_grad=True : #params=768
+gpt2.h.5.ln_2.bias: requires_grad=True : #params=768
+gpt2.ln_f.weight: requires_grad=True : #params=768
+gpt2.ln_f.bias: requires_grad=True : #params=768
+in_layer.weight: requires_grad=True : #params=12288
+in_layer.bias: requires_grad=True : #params=768
+out_layer.weight: requires_grad=True : #params=221184
+out_layer.bias: requires_grad=True : #params=24
+Total #params manual = 1040664
+[INFO] Register zero_ops() for <class 'torch.nn.modules.dropout.Dropout'>.
+[INFO] Register count_normalization() for <class 'torch.nn.modules.normalization.LayerNorm'>.
+[INFO] Register count_linear() for <class 'torch.nn.modules.linear.Linear'>.
+-------------------------------------------------- MACs across 10% train data = 4.341G nparams = 254.232K
+self vs thop trainable params 1040664 254.232K
+0it [00:00, ?it/s]1it [00:00,  6.91it/s]3it [00:00, 13.00it/s]5it [00:00, 14.63it/s]7it [00:00, 15.87it/s]9it [00:00, 16.83it/s]11it [00:00, 17.36it/s]13it [00:00, 17.86it/s]15it [00:00, 18.20it/s]17it [00:01, 18.33it/s]19it [00:01, 18.50it/s]20it [00:01, 16.13it/s]
+-------------------------------------------------- Epoch: 1 cost time: 1.5919666290283203
+0it [00:00, ?it/s]4it [00:00, 31.91it/s]8it [00:00, 32.47it/s]10it [00:00, 27.54it/s]
+Epoch: 1, Steps: 20 | Train Loss: 0.5966256 Vali Loss: 0.2255494
+lr = 0.0009938442
+Validation loss decreased (inf --> 0.225549).  Saving model ...
+0it [00:00, ?it/s]2it [00:00, 19.50it/s]4it [00:00, 19.18it/s]6it [00:00, 18.96it/s]8it [00:00, 18.75it/s]10it [00:00, 18.83it/s]12it [00:00, 18.89it/s]14it [00:00, 18.77it/s]16it [00:00, 18.77it/s]18it [00:00, 18.74it/s]20it [00:01, 18.49it/s]20it [00:01, 17.73it/s]
+-------------------------------------------------- Epoch: 2 cost time: 1.7922143936157227
+0it [00:00, ?it/s]4it [00:00, 31.99it/s]8it [00:00, 32.32it/s]10it [00:00, 27.42it/s]
+Epoch: 2, Steps: 20 | Train Loss: 0.4436445 Vali Loss: 0.2130269
+lr = 0.0009755285
+Validation loss decreased (0.225549 --> 0.213027).  Saving model ...
+0it [00:00, ?it/s]2it [00:00, 18.78it/s]4it [00:00, 18.76it/s]6it [00:00, 18.79it/s]8it [00:00, 18.76it/s]10it [00:00, 18.80it/s]12it [00:00, 18.86it/s]14it [00:00, 18.92it/s]16it [00:00, 18.79it/s]18it [00:00, 18.80it/s]20it [00:01, 18.73it/s]20it [00:01, 17.77it/s]
+-------------------------------------------------- Epoch: 3 cost time: 1.6429753303527832
+0it [00:00, ?it/s]4it [00:00, 32.13it/s]8it [00:00, 31.93it/s]10it [00:00, 26.86it/s]
+Epoch: 3, Steps: 20 | Train Loss: 0.4181144 Vali Loss: 0.2121200
+lr = 0.0009455038
+Validation loss decreased (0.213027 --> 0.212120).  Saving model ...
+0it [00:00, ?it/s]2it [00:00, 19.78it/s]4it [00:00, 19.08it/s]6it [00:00, 19.05it/s]8it [00:00, 19.02it/s]10it [00:00, 18.96it/s]12it [00:00, 18.92it/s]14it [00:00, 18.75it/s]16it [00:00, 18.86it/s]18it [00:00, 18.94it/s]20it [00:01, 18.73it/s]20it [00:01, 17.87it/s]
+-------------------------------------------------- Epoch: 4 cost time: 1.828547716140747
+0it [00:00, ?it/s]4it [00:00, 29.97it/s]8it [00:00, 32.87it/s]10it [00:00, 27.67it/s]
+Epoch: 4, Steps: 20 | Train Loss: 0.3988970 Vali Loss: 0.2158986
+lr = 0.0009045095
+EarlyStopping counter: 1 out of 3
+0it [00:00, ?it/s]2it [00:00, 19.37it/s]4it [00:00, 18.58it/s]6it [00:00, 18.55it/s]8it [00:00, 18.78it/s]10it [00:00, 18.83it/s]12it [00:00, 18.81it/s]14it [00:00, 18.44it/s]16it [00:00, 18.31it/s]18it [00:00, 18.47it/s]20it [00:01, 18.41it/s]20it [00:01, 17.63it/s]
+-------------------------------------------------- Epoch: 5 cost time: 1.8270153999328613
+0it [00:00, ?it/s]4it [00:00, 32.07it/s]8it [00:00, 32.69it/s]10it [00:00, 27.58it/s]
+Epoch: 5, Steps: 20 | Train Loss: 0.3855187 Vali Loss: 0.2125535
+lr = 0.0008535549
+EarlyStopping counter: 2 out of 3
+0it [00:00, ?it/s]2it [00:00, 19.99it/s]4it [00:00, 19.34it/s]6it [00:00, 19.03it/s]8it [00:00, 19.03it/s]10it [00:00, 18.51it/s]12it [00:00, 18.60it/s]14it [00:00, 18.71it/s]16it [00:00, 18.48it/s]18it [00:00, 18.57it/s]20it [00:01, 18.56it/s]20it [00:01, 17.71it/s]
+-------------------------------------------------- Epoch: 6 cost time: 1.8085136413574219
+0it [00:00, ?it/s]4it [00:00, 31.89it/s]8it [00:00, 31.54it/s]10it [00:00, 25.85it/s]
+Epoch: 6, Steps: 20 | Train Loss: 0.4142975 Vali Loss: 0.2213193
+lr = 0.0007938947
+EarlyStopping counter: 3 out of 3
+Early stopping
+------------------------------------
+==================== TEST RESULTS ====================
+0it [00:00, ?it/s]5it [00:00, 44.18it/s]10it [00:00, 44.23it/s]10it [00:00, 35.69it/s]
+test shape: (10, 256, 24, 1) (10, 256, 24, 1)
+test shape: (2560, 24, 1) (2560, 24, 1)
+mae:0.3126, mse:0.2539, rmse:0.5038, smape:91.7776
+==================== TEST RESULTS DONE ====================
+-------------------------------------------------- TEST time = 0.7336771488189697
+mse_mean = 0.2539, mse_std = 0.0000
+mae_mean = 0.3126, mae_std = 0.0000
+****************************************************************************************************
+======================================== Runtime metrics ========================================
+MACs = 4.341G
+params = 254.232K
+total params = 82.147M
+epoch time = 1.8085136413574219
+max memory = 1.73 GB
+test time = 0.7336771488189697
+****************************************************************************************************

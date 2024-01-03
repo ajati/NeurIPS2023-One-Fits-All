@@ -4,6 +4,10 @@ from data_provider.data_loader import (
     Dataset_TSF,
     Dataset_ETT_hour,
     Dataset_ETT_minute,
+    Dataset_IT_application,
+    Dataset_IT_service,
+    BikeSharingDataset,
+    CarbonCaptureDataset,
 )
 from torch.utils.data import DataLoader
 
@@ -12,6 +16,10 @@ data_dict = {
     "tsf_data": Dataset_TSF,
     "ett_h": Dataset_ETT_hour,
     "ett_m": Dataset_ETT_minute,
+    "application": Dataset_IT_application,
+    "service": Dataset_IT_service,
+    "bike_sharing": BikeSharingDataset,
+    "carbon": CarbonCaptureDataset,
 }
 
 

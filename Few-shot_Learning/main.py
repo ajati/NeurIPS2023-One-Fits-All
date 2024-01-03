@@ -303,8 +303,10 @@ for ii in range(args.itr):
     best_model_path = path + "/" + "checkpoint.pth"
     model.load_state_dict(torch.load(best_model_path))
     print("------------------------------------")
+    print("=" * 20, "TEST RESULTS", "=" * 20)
     test_time = time.time()
     mse, mae = test(model, test_data, test_loader, args, device, ii)
+    print("=" * 20, "TEST RESULTS DONE", "=" * 20)
     calculated_test_time = time.time() - test_time
     print("-" * 50, "TEST time =", calculated_test_time)
     mses.append(mse)
