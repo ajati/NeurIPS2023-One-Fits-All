@@ -99,6 +99,9 @@ mses = []
 maes = []
 
 
+print("args.batchsize", args.batch_size)
+
+
 def calculate_flops(model, train_dls):
     try:
         # no_batches = len(train_dls)
@@ -142,6 +145,14 @@ def convert_size(size_bytes):
     p = math.pow(1024, i)
     s = round(size_bytes / p, 2)
     return "%s %s" % (s, size_name[i])
+
+
+def count_learn_parameters(model):
+    return sum(p.numel() for p in model.parameters() if p.requires_grad)
+
+
+def count_all_parameters(model):
+    return sum(p.numel() for p in model.parameters())
 
 
 for ii in range(args.itr):
@@ -198,6 +209,9 @@ for ii in range(args.itr):
             )
     print("Total #params manual =", total_params_manual)
     # mse, mae = test(model, test_data, test_loader, args, device, ii)
+
+    print("VJ: total learnable params: ", count_learn_parameters(model))
+    print("VJ: total params: ", count_all_parameters(model))
 
     params = model.parameters()
     model_optim = torch.optim.Adam(params, lr=args.learning_rate)

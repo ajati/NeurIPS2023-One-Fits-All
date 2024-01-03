@@ -1,0 +1,44 @@
+python: can't open file '/dccstor/tsfm-irl/vijaye12/opensource/NeurIPS2023-One-Fits-All/Few-shot_Learning/scripts/main.py': [Errno 2] No such file or directory
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@cccxc529.pok.ibm.com>
+Subject: Job 953785: <sh /dccstor/tsfm-irl/vijaye12/opensource/NeurIPS2023-One-Fits-All/Few-shot_Learning/scripts/ETTh1_JATI.sh> in cluster <cccCluster> Done
+
+Job <sh /dccstor/tsfm-irl/vijaye12/opensource/NeurIPS2023-One-Fits-All/Few-shot_Learning/scripts/ETTh1_JATI.sh> was submitted from host <cccxl012.pok.ibm.com> by user <vijaye12> in cluster <cccCluster> at Mon Dec 25 03:21:16 2023
+Job was executed on host(s) <32*cccxc529.pok.ibm.com>, in queue <platform>, as user <vijaye12> in cluster <cccCluster> at Mon Dec 25 03:21:17 2023
+</u/vijaye12> was used as the home directory.
+</dccstor/tsfm-irl/vijaye12/opensource/NeurIPS2023-One-Fits-All/Few-shot_Learning/scripts> was used as the working directory.
+Started at Mon Dec 25 03:21:17 2023
+Terminated at Mon Dec 25 03:21:19 2023
+Results reported at Mon Dec 25 03:21:19 2023
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+sh /dccstor/tsfm-irl/vijaye12/opensource/NeurIPS2023-One-Fits-All/Few-shot_Learning/scripts/ETTh1_JATI.sh
+------------------------------------------------------------
+
+Successfully completed.
+
+Resource usage summary:
+
+    CPU time :                                   0.20 sec.
+    Max Memory :                                 1 MB
+    Average Memory :                             1.00 MB
+    Total Requested Memory :                     450560.00 MB
+    Delta Memory :                               450559.00 MB
+    Max Swap :                                   -
+    Max Processes :                              1
+    Max Threads :                                1
+    Run time :                                   0 sec.
+    Turnaround time :                            3 sec.
+
+The output (if any) is above this job summary.
+
+
+
+PS:
+
+Read file <./err.txt> for stderr output of this job.
+

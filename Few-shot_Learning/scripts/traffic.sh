@@ -16,7 +16,7 @@ python main.py \
     --pred_len $pred_len \
     --batch_size 2048 \
     --learning_rate 0.001 \
-    --train_epochs 10 \
+    --train_epochs 1 \
     --decay_fac 0.75 \
     --d_model 768 \
     --n_heads 4 \

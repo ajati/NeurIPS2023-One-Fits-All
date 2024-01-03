@@ -733,6 +733,7 @@ class Dataset_ETT_hour(Dataset):
 
         self.data_x = data[border1:border2]
         self.data_y = data[border1:border2]
+        print("self.data_x pruned = {}".format(self.data_x.shape))
         self.data_stamp = data_stamp
 
     def __getitem__(self, index):

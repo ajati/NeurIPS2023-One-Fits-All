@@ -7,13 +7,13 @@ pred_len=96
 lr=0.0001
 
 python main.py \
-    --root_path /dccstor/dnn_forecasting/FM/data/ETDataset/ETT-small/ \
+    --root_path /dccstor/tsfm-irl/vijaye12/datasets/public/ETDataset/ETT-small \
     --data_path ETTh1.csv \
     --model_id ETTh1_$model'_'$gpt_layer'_'$seq_len'_'$pred_len'_'$percent \
     --data ett_h \
     --features M \
     --seq_len $seq_len \
-    --label_len 0 \
+    --label_len 168 \
     --pred_len $pred_len \
     --batch_size 64 \
     --lradj type4 \
